@@ -101,7 +101,21 @@ the week was the most common for garbage removal?
 var dataset = 'https://raw.githubusercontent.com/CPLN690-MUSA610/datasets/master/geojson/philadelphia-garbage-collection-boundaries.geojson';
 
 var myStyle = function(feature) {
-  return {};
+  if(feature.properties.COLLDAY === "MON"){
+    return {color: 'red'};
+  }
+  else if(feature.properties.COLLDAY === "TUE"){
+    return {color: 'blue'};
+  }
+  else if(feature.properties.COLLDAY === "WED"){
+    return {color: 'green'};
+  }
+  else if(feature.properties.COLLDAY === "THU"){
+    return {color: 'pink'};
+  }
+  else if(feature.properties.COLLDAY === "FRI"){
+    return {color: 'orange'};
+  }
 };
 
 var eachFeature = function(feature, layer) {
@@ -111,13 +125,38 @@ var eachFeature = function(feature, layer) {
     Check out feature.properties to see some useful data about the feature that
     you can use in your application.
     ===================== */
-    console.log(feature);
+    if(feature.properties.COLLDAY === "MON"){
+      $('.day-of-week').text("Monday");
+    }
+    else if(feature.properties.COLLDAY === "TUE"){
+      $('.day-of-week').text("Tuesday");
+    }
+    else if(feature.properties.COLLDAY === "WED"){
+      $('.day-of-week').text("Wednesday");
+    }
+    else if(feature.properties.COLLDAY === "THU"){
+      $('.day-of-week').text("Thursday");
+    }
+    else if(feature.properties.COLLDAY === "FRI"){
+      $('.day-of-week').text("Friday");
+    }
+    map.fitBounds(layer.getBounds());
     showResults();
   });
 };
 
 var myFilter = function(feature) {
-  return true;
+  if(feature.properties.COLLDAY === " "){
+    return false;
+  }
+  else{
+    return true;
+  }
+};
+
+var hideResults = function(){
+  $('#results').hide();
+  $('#intro').show();
 };
 
 $(document).ready(function() {
@@ -128,6 +167,25 @@ $(document).ready(function() {
       style: myStyle,
       filter: myFilter
     }).addTo(map);
+
+    var dayOccuranceDes = _.chain(parsedData.features).map(function(datum){
+      return datum.properties
+    }).countBy("COLLDAY")
+    .pairs()
+    .sortBy(1).reverse()
+    .pluck(0)
+    .value();
+
+    if(dayOccuranceDes[0] === "WED"){
+      $('.collection-day-of-week').text("Wednesday");
+    }
+  });
+
+
+
+  $('.close-classic').click(function(){
+    hideResults();
+    map.setView([40.000, -75.1090],11);
   });
 });
 
@@ -157,3 +215,7 @@ var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{
   maxZoom: 20,
   ext: 'png'
 }).addTo(map);
+
+var commonCollectionDay = function(){
+
+}
