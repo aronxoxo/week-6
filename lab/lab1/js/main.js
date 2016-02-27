@@ -100,21 +100,25 @@ the week was the most common for garbage removal?
 
 var dataset = 'https://raw.githubusercontent.com/CPLN690-MUSA610/datasets/master/geojson/philadelphia-garbage-collection-boundaries.geojson';
 
+
+
+
+
 var myStyle = function(feature) {
   if(feature.properties.COLLDAY === "MON"){
-    return {color: 'red'};
+    return {color: '#b3e2cd'};
   }
   else if(feature.properties.COLLDAY === "TUE"){
-    return {color: 'blue'};
+    return {color: '#fdcdac'};
   }
   else if(feature.properties.COLLDAY === "WED"){
-    return {color: 'green'};
+    return {color: '#cbd5e8'};
   }
   else if(feature.properties.COLLDAY === "THU"){
-    return {color: 'pink'};
+    return {color: '#f4cae4'};
   }
   else if(feature.properties.COLLDAY === "FRI"){
-    return {color: 'orange'};
+    return {color: '#e6f5c9'};
   }
 };
 
@@ -215,7 +219,3 @@ var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{
   maxZoom: 20,
   ext: 'png'
 }).addTo(map);
-
-var commonCollectionDay = function(){
-
-}

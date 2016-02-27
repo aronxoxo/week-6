@@ -61,13 +61,13 @@ p.main {
 }
 
 table{
-  opacity: 0.7;
+
 }
 
 td div{
   width:30px;
   height:20px;
-  opacity: 0.6;
+  
 }
 
 td:last-child{
@@ -89,21 +89,21 @@ td:last-child{
 }
 
 #Monday{
-  background-color: red;
+  background-color: #b3e2cd;
 }
 
 #Tuesday{
-  background-color: blue;
+  background-color: #fdcdac;
 }
 
 #Wednesday{
-  background-color: green;
+  background-color: #cbd5e8;
 }
 
 #Thursday{
-  background-color: pink;
+  background-color: #f4cae4;
 }
 
 #Friday{
-  background-color: orange;
+  background-color: #e6f5c9;
 }
