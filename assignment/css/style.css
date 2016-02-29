@@ -11,7 +11,7 @@ p.main {
 .map {
     position: absolute;
     right: 0px;
-    left: 405px;
+    left: 505px;
     height: 100%;
     top: 0;
     border: 1px solid #ccc;
@@ -22,7 +22,7 @@ p.main {
 .sidebar {
     position: absolute;
     left: 0px;
-    width: 400px;
+    width: 500px;
     top: 0;
     bottom: 0;
     overflow-y: auto;
@@ -34,40 +34,22 @@ p.main {
     margin: 5px;
 }
 
-[class*='close-'] {
-  color: #777;
-  font: 20px/100% arial, sans-serif;
-  position: absolute;
-  right: 5px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 #fff;
-  top: 5px;
-}
-
-.close-classic:after {
-  content: 'X'; /* ANSI X letter */
-}
-
 .legend {
   position: absolute;
   background-color: #fff;
   z-index: 2000;
   right:5px;
-  top:5px;
+  bottom:5px;
   margin: 5px;
   padding:10px 10px 10px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-table{
-
-}
-
 td div{
   width:30px;
   height:20px;
-  
+
 }
 
 td:last-child{
@@ -76,34 +58,28 @@ td:last-child{
   padding-bottom: 5px;
 }
 
-.day-of-week{
-  font-weight: bold;
-  font-size: 35px;
-  font-family: Garamond;
+#legend-first{
+  background-color: #ffffb2;
 }
 
-.collection-day-of-week{
-  font-weight: bold;
-  font-size: 25px;
-  font-family: Verdana;
+#legend-second{
+  background-color: #fed976;
 }
 
-#Monday{
-  background-color: #b3e2cd;
+#legend-third{
+  background-color: #feb24c;
 }
 
-#Tuesday{
-  background-color: #fdcdac;
+#legend-fourth{
+  background-color: #fd8d3c;
 }
 
-#Wednesday{
-  background-color: #cbd5e8;
+#legend-fifth{
+  background-color: #fc4e2a;
 }
 
-#Thursday{
-  background-color: #f4cae4;
-}
-
-#Friday{
-  background-color: #e6f5c9;
+#navigation{
+  position:absolute;
+  left:20px;
+  bottom:50px;
 }

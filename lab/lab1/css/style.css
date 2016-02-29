@@ -34,7 +34,7 @@ p.main {
     margin: 5px;
 }
 
-[class*='close-'] {
+/*[class*='close-'] {
   color: #777;
   font: 20px/100% arial, sans-serif;
   position: absolute;
@@ -45,10 +45,25 @@ p.main {
 }
 
 .close-classic:after {
-  content: 'X'; /* ANSI X letter */
+  content: 'X';
+}*/
+
+#backButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
-.legend {
+/*.legend {
   position: absolute;
   background-color: #fff;
   z-index: 2000;
@@ -67,43 +82,11 @@ table{
 td div{
   width:30px;
   height:20px;
-  
+
 }
 
 td:last-child{
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-}
-
-.day-of-week{
-  font-weight: bold;
-  font-size: 35px;
-  font-family: Garamond;
-}
-
-.collection-day-of-week{
-  font-weight: bold;
-  font-size: 25px;
-  font-family: Verdana;
-}
-
-#Monday{
-  background-color: #b3e2cd;
-}
-
-#Tuesday{
-  background-color: #fdcdac;
-}
-
-#Wednesday{
-  background-color: #cbd5e8;
-}
-
-#Thursday{
-  background-color: #f4cae4;
-}
-
-#Friday{
-  background-color: #e6f5c9;
-}
+}*/
