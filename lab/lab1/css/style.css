@@ -34,7 +34,7 @@ p.main {
     margin: 5px;
 }
 
-/*[class*='close-'] {
+[class*='close-'] {
   color: #777;
   font: 20px/100% arial, sans-serif;
   position: absolute;
@@ -46,7 +46,7 @@ p.main {
 
 .close-classic:after {
   content: 'X';
-}*/
+}
 
 #backButton {
   display: inline-block;
@@ -63,7 +63,7 @@ p.main {
   margin: 5px;
 }
 
-/*.legend {
+.legend {
   position: absolute;
   background-color: #fff;
   z-index: 2000;
@@ -89,4 +89,34 @@ td:last-child{
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-}*/
+}
+
+#Monday{
+  background-color: #b3e2cd;
+}
+
+#Tuesday{
+  background-color: #fdcdac;
+}
+
+#Wednesday{
+  background-color: #cbd5e8;
+}
+
+#Thursday{
+  background-color: #f4cae4;
+}
+
+#Friday{
+  background-color: #e6f5c9;
+}
+
+.day-of-week{
+  color:red;
+  font-family: Garamond;
+}
+
+.collection-day-of-week{
+  color:blue;
+  font-family:verdana;
+}
